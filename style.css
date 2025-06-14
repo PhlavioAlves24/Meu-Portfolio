@@ -109,7 +109,7 @@ body {
     font-size: 1.2rem;
     color: var(--text-color);
     /* A opacidade é controlada pelo JS para o efeito de digitação */
-    opacity: 0; /* Começa invisível e o JS mostra o texto */
+    /* Começa invisível e o JS mostra o texto */
 }
 
 .btn-primary {
