@@ -1,3 +1,36 @@
+// Função para o efeito de máquina de escrever
+function typeWriter(element, speed = 250) { // Increased default speed to 250ms
+    const text = element.textContent;
+    element.innerHTML = ''; // Limpa o conteúdo inicial
+    let i = 0;
+
+    // Cria um elemento para o cursor
+    const cursorSpan = document.createElement('span');
+    cursorSpan.classList.add('typing-cursor'); // Adiciona uma classe para estilização via CSS
+    element.appendChild(cursorSpan); // Adiciona o cursor inicialmente ao elemento
+
+    function type() {
+        if (i < text.length) {
+            // Adiciona o próximo caractere ANTES do cursor
+            const char = text.charAt(i);
+            cursorSpan.insertAdjacentText('beforebegin', char);
+            i++;
+            setTimeout(type, speed); // Usa a velocidade ajustada
+        } else {
+            // Ao final da digitação, remove a animação de piscar do cursor
+            cursorSpan.style.animation = 'none';
+            cursorSpan.style.opacity = '0'; // Opcional: faz o cursor sumir suavemente
+            setTimeout(() => {
+                cursorSpan.remove(); // Remove o cursor do DOM após a animação
+            }, 500); // Espera um pouco antes de remover para que a transição seja visível
+        }
+    }
+    
+    // Inicia a digitação com um pequeno atraso para melhor visualização
+    setTimeout(type, 500);
+}
+
+
 // Animação de carregamento das habilidades
 function animateSkills() {
   const skillItems = document.querySelectorAll('.skill-item');
@@ -33,6 +66,18 @@ function animateSkills() {
 
 // Inicia todas as animações quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', function() {
+  // Efeito de máquina de escrever no título da página
+  const heroTitle = document.querySelector('.hero-title');
+  if (heroTitle) {
+      typeWriter(heroTitle, 100); // Hero title can be a bit faster
+  }
+
+  // Efeito de máquina de escrever no Navbar Brand
+  const navbarBrand = document.getElementById('navbarBrand');
+  if (navbarBrand) {
+      typeWriter(navbarBrand, 200); // Navbar brand can be slower
+  }
+
   // Atualiza o ano no footer
   document.getElementById('year').textContent = new Date().getFullYear();
   
