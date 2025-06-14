@@ -1,5 +1,5 @@
 // Função para o efeito de máquina de escrever
-function typeWriter(element, speed = 250) {
+function typeWriter(element, speed = 100) { // Velocidade padrão
     const text = element.textContent;
     element.innerHTML = ''; // Limpa o conteúdo inicial
     let i = 0;
@@ -69,8 +69,33 @@ document.addEventListener('DOMContentLoaded', function() {
   // Efeito de máquina de escrever no Navbar Brand
   const navbarBrand = document.getElementById('navbarBrand');
   if (navbarBrand) {
-      typeWriter(navbarBrand, 200); // Navbar brand can be slower
+      typeWriter(navbarBrand, 200); // Velocidade para o Navbar Brand
   }
+
+  // Efeito de máquina de escrever no subtítulo (hero-subtitle)
+  const heroSubtitle = document.getElementById('heroSubtitle');
+  if (heroSubtitle) {
+      // Para o subtítulo, vamos animar ele DENTRO de uma função de callback
+      // para que ele comece a digitar após um certo tempo, já que ele não
+      // tem o `display: inline-block` no CSS que o `typeWriter` espera.
+      // O ideal seria que `hero-subtitle` também tivesse `display: inline-block; white-space: nowrap; overflow: hidden;` no CSS,
+      // mas como ele é um parágrafo e pode ter mais de uma linha,
+      // vou simular o efeito aqui.
+      const originalSubtitleText = heroSubtitle.textContent; // Salva o texto original
+      heroSubtitle.textContent = ''; // Limpa o conteúdo
+      let j = 0;
+      function typeSubtitle() {
+          if (j < originalSubtitleText.length) {
+              heroSubtitle.textContent += originalSubtitleText.charAt(j);
+              j++;
+              setTimeout(typeSubtitle, 50); // Velocidade da digitação do subtítulo (mais rápido)
+          } else {
+              heroSubtitle.style.opacity = '1'; // Garante que fique visível ao final
+          }
+      }
+      setTimeout(typeSubtitle, 1000); // Atraso para iniciar a digitação do subtítulo
+  }
+
 
   // Atualiza o ano no footer
   document.getElementById('year').textContent = new Date().getFullYear();
