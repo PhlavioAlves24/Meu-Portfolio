@@ -1,5 +1,5 @@
 // Função para o efeito de máquina de escrever
-function typeWriter(element, speed = 250) { // Increased default speed to 250ms
+function typeWriter(element, speed = 250) {
     const text = element.textContent;
     element.innerHTML = ''; // Limpa o conteúdo inicial
     let i = 0;
@@ -66,12 +66,6 @@ function animateSkills() {
 
 // Inicia todas as animações quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', function() {
-  // Efeito de máquina de escrever no título da página
-  const heroTitle = document.querySelector('.hero-title');
-  if (heroTitle) {
-      typeWriter(heroTitle, 100); // Hero title can be a bit faster
-  }
-
   // Efeito de máquina de escrever no Navbar Brand
   const navbarBrand = document.getElementById('navbarBrand');
   if (navbarBrand) {
