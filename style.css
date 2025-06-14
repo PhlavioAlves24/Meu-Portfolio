@@ -109,7 +109,6 @@ body {
     margin-bottom: 30px;
     font-size: 1.2rem;
     color: var(--text-color);
-    animation: fadeInUp 0.8s ease 0.2s forwards;
     opacity: 0;
 }
 
