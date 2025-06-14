@@ -100,7 +100,7 @@ body {
     margin: 25px 0 15px;
     font-size: 2.5rem;
     color: var(--dark-color);
-    /* Removed display: inline-block and white-space: nowrap as typeWriter is no longer applied */
+    /* Removido display: inline-block e white-space: nowrap, pois a animação foi removida do H1 */
 }
 
 .hero-subtitle {
@@ -108,8 +108,8 @@ body {
     margin-bottom: 30px;
     font-size: 1.2rem;
     color: var(--text-color);
-    animation: fadeInUp 0.8s ease 0.2s forwards;
-    opacity: 0;
+    /* A opacidade é controlada pelo JS para o efeito de digitação */
+    opacity: 0; /* Começa invisível e o JS mostra o texto */
 }
 
 .btn-primary {
