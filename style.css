@@ -31,6 +31,9 @@ body {
     font-weight: 700;
     color: var(--primary-color) !important;
     font-size: 1.5rem;
+    display: inline-block; /* Crucial para o efeito de digitação e alinhamento do cursor */
+    white-space: nowrap; /* Garante que o texto não quebre linha durante a animação */
+    overflow: hidden; /* Esconde o texto que ainda não foi digitado */
 }
 
 .nav-link {
@@ -97,7 +100,8 @@ body {
     margin: 25px 0 15px;
     font-size: 2.5rem;
     color: var(--dark-color);
-    animation: fadeInUp 0.8s ease;
+    display: inline-block; /* Ajuda no alinhamento do cursor */
+    white-space: nowrap; /* Garante que o texto não quebre linha durante a animação */
 }
 
 .hero-subtitle {
@@ -349,6 +353,23 @@ footer {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
 }
+
+/* Animação do cursor para o efeito de digitação */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--primary-color); }
+}
+
+.typing-cursor {
+    display: inline-block; /* Importante para que a borda seja visível e ocupe espaço */
+    width: 3px; /* Largura da "borda" do cursor */
+    height: 1.2em; /* Altura do cursor, baseada na altura da linha do texto */
+    background-color: var(--primary-color); /* Cor do cursor */
+    vertical-align: middle; /* Alinha o cursor com o texto */
+    animation: blink-caret .75s step-end infinite;
+    margin-left: 2px; /* Pequeno espaçamento entre o texto e o cursor */
+}
+
 
 .animate {
     opacity: 0;
