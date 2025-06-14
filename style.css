@@ -100,8 +100,7 @@ body {
     margin: 25px 0 15px;
     font-size: 2.5rem;
     color: var(--dark-color);
-    display: inline-block; /* Ajuda no alinhamento do cursor */
-    white-space: nowrap; /* Garante que o texto não quebre linha durante a animação */
+    /* Removed display: inline-block and white-space: nowrap as typeWriter is no longer applied */
 }
 
 .hero-subtitle {
@@ -109,6 +108,7 @@ body {
     margin-bottom: 30px;
     font-size: 1.2rem;
     color: var(--text-color);
+    animation: fadeInUp 0.8s ease 0.2s forwards;
     opacity: 0;
 }
 
