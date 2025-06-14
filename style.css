@@ -110,6 +110,17 @@ body {
     color: var(--text-color);
     /* A opacidade é controlada pelo JS para o efeito de digitação */
     /* Começa invisível e o JS mostra o texto */
+    
+    /* **INÍCIO DA ADIÇÃO** */
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 1s ease forwards; /* Animação para aparecer */
+    animation-delay: 1.2s; /* Atraso para aparecer depois do título */
+    /* **FIM DA ADIÇÃO** */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .btn-primary {
