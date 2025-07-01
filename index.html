@@ -3,219 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phlavio Alves | Desenvolvedor Front-end</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Phlavio Alves | Portfólio Minimalista</title>
+    <meta name="description" content="Portfólio profissional e minimalista de Phlavio Alves, desenvolvedor front-end focado em soluções elegantes.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
+
+    <header class="header">
         <div class="container">
-            <a class="navbar-brand" href="#" id="navbarBrand">Phlavio Alves</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projetos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contato</a>
-                    </li>
+            <nav class="nav">
+                <a href="#hero" class="logo">P.A.Dev</a>
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link">Sobre</a></li>
+                    <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                    <li><a href="#projects" class="nav-link">Projetos</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
                 </ul>
-            </div>
+                <button class="hamburger" aria-label="Abrir menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4 text-center">
-                    <img src="profile.jpg" alt="Phlavio Alves" class="profile-img rounded-circle">
-                </div>
-                <div class="col-lg-8">
+    <main>
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <div class="hero-content">
                     <h1 class="hero-title">Phlavio Alves</h1>
-                    <p class="hero-subtitle">Desenvolvedor Front-end | Criador de experiências digitais excepcionais</p>
-                    <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title animate">Sobre Mim</h2>
-            <div class="row">
-                <div class="col-lg-6 animate" style="animation-delay: 0.2s;">
-                    <p>Olá! Sou Phlavio Alves, um desenvolvedor front-end apaixonado por criar interfaces bonitas e funcionais. Com experiência em HTML, CSS, JavaScript e frameworks modernos, transformo ideias em realidade digital.</p>
-                    <p>Meu objetivo é desenvolver soluções que não apenas atendam às necessidades dos usuários, mas que também proporcionem uma experiência memorável e intuitiva.</p>
-                    <p>Quando não estou codando, você pode me encontrar explorando novas tecnologias, participando de comunidades de desenvolvimento ou criando projetos pessoais.</p>
-                </div>
-                <div class="col-lg-6 animate" style="animation-delay: 0.4s;">
-                    <div class="skill-item skill-html">
-                        <div class="skill-name">HTML5</div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item skill-css">
-                        <div class="skill-name">CSS3</div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item skill-js">
-                        <div class="skill-name">JavaScript</div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item skill-bootstrap">
-                        <div class="skill-name">Bootstrap</div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item skill-react">
-                        <div class="skill-name">React</div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item skill-uiux">
-                        <div class="skill-name">UI/UX Design</div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+                    <p class="hero-subtitle">Desenvolvedor Front-End</p>
+                    <p class="hero-description">
+                        Construindo interfaces web **elegantes e funcionais** com foco na experiência do usuário e na otimização de performance.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                        <a href="https://github.com/PhlavioAlves24" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title animate">Meus Projetos</h2>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 animate" style="animation-delay: 0.2s;">
-                    <div class="project-card">
-                        <img src="Todolist.jpg" alt="TodoList" class="project-img">
-                        <div class="project-body">
-                            <h3 class="project-title">TodoList</h3>
-                            <p>Uma aplicação de lista de tarefas interativa com funcionalidades completas de CRUD, filtros e armazenamento local.</p>
-                            <div class="mt-3">
-                                <span class="project-badge">HTML</span>
-                                <span class="project-badge">CSS</span>
-                                <span class="project-badge">JavaScript</span>
-                                <span class="project-badge">LocalStorage</span>
+        <section class="about-section" id="about">
+            <div class="container">
+                <h2 class="section-heading">Sobre Mim</h2>
+                <div class="about-grid">
+                    <div class="about-image reveal">
+                        <img src="profile.jpg" alt="Foto de Phlavio Alves">
+                    </div>
+                    <div class="about-text reveal">
+                        <h3>Uma Abordagem Centrada no Usuário</h3>
+                        <p>
+                            Minha paixão pelo desenvolvimento front-end reside na capacidade de criar soluções digitais que são tanto **bonitas quanto intuitivas**. Acredito em um design limpo e em interações fluidas que proporcionam uma excelente experiência ao usuário. Minha jornada é marcada por um entusiasmo constante em transformar ideias complexas em realidade acessível.
+                        </p>
+                        <p>
+                            Com uma mentalidade de **aprendizado contínuo**, busco sempre as melhores práticas e tecnologias para entregar projetos de alta qualidade e performance. Sou movido por desafios e pela satisfação de ver a tecnologia melhorar a vida das pessoas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section" id="skills">
+            <div class="container">
+                <h2 class="section-heading">Habilidades</h2>
+                <div class="skills-grid">
+                    <div class="skill-card reveal">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-card reveal">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-card reveal">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-card reveal">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-card reveal">
+                        <i class="fab fa-vuejs"></i>
+                        <span>Vue.js</span>
+                    </div>
+                    <div class="skill-card reveal">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-card reveal">
+                        <i class="fas fa-database"></i>
+                        <span>SQL</span>
+                    </div>
+                    <div class="skill-card reveal">
+                        <i class="fas fa-code-branch"></i>
+                        <span>Git</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <h2 class="section-heading">Projetos</h2>
+                <div class="projects-grid">
+                    <div class="project-card reveal">
+                        <img src="Homesofa.jpeg" alt="Projeto Web Moderno">
+                        <div class="project-info">
+                            <h3>Projeto Web Moderno</h3>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
                             </div>
-                            <div class="mt-3">
-                                <a href="https://phlavioalves24.github.io/My-ToDoList/" class="btn btn-sm btn-outline-primary">Ver Demo</a>
-                                <a href="https://github.com/PhlavioAlves24/My-ToDoList" class="btn btn-sm btn-outline-secondary ms-2">Código Fonte</a>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="https://github.com/PhlavioAlves24/projeto-web-moderno" target="_blank"><i class="fab fa-github"></i> Código</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 animate" style="animation-delay: 0.4s;">
-                    <div class="project-card">
-                        <img src="Homesofa.jpeg" alt="Sofás Estofados" class="project-img">
-                        <div class="project-body">
-                            <h3 class="project-title">Sofás Estofados</h3>
-                            <p>Site e-commerce completo para uma loja de móveis estofados, com catálogo de produtos, carrinho de compras e formulário de contato.</p>
-                            <div class="mt-3">
-                                <span class="project-badge">HTML</span>
-                                <span class="project-badge">CSS</span>
-                                <span class="project-badge">Bootstrap</span>
-                                <span class="project-badge">JavaScript</span>
+                    <div class="project-card reveal">
+                        <img src="K9ultra.jpg" alt="Aplicação React Intuitiva">
+                        <div class="project-info">
+                            <h3>Landing_Page K9ultra</h3>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Redux</span>
+                                <span>API</span>
                             </div>
-                            <div class="mt-3">
-                                <a href="https://phlavioalves24.github.io/SofasEstofados/" class="btn btn-sm btn-outline-primary">Ver Demo</a>
-                                <a href="https://github.com/PhlavioAlves24/SofasEstofados" class="btn btn-sm btn-outline-secondary ms-2">Código Fonte</a>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="https://github.com/PhlavioAlves24/aplicacao-react-intuitiva" target="_blank"><i class="fab fa-github"></i> Código</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 animate" style="animation-delay: 0.6s;">
-                    <div class="project-card">
-                        <img src="K9ultra.jpg" alt="K9 Ultra" class="project-img">
-                        <div class="project-body">
-                            <h3 class="project-title">K9 Ultra</h3>
-                            <p>Landing page moderna e responsiva para o smartwatch K9 Ultra, com destaque para características do produto e call-to-action eficiente.</p>
-                            <div class="mt-3">
-                                <span class="project-badge">HTML</span>
-                                <span class="project-badge">CSS</span>
-                                <span class="project-badge">Bootstrap</span>
-                                <span class="project-badge">Animations</span>
+                    <div class="project-card reveal">
+                        <img src="Todolist.jpg" alt="Landing Page Otimizada">
+                        <div class="project-info">
+                            <h3>Landing Page Otimizada</h3>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS Grid</span>
+                                <span>JavaScript</span>
                             </div>
-                            <div class="mt-3">
-                                <a href="https://phlavioalves24.github.io/K9ultra/" class="btn btn-sm btn-outline-primary">Ver Demo</a>
-                                <a href="https://github.com/PhlavioAlves24/K9ultra" class="btn btn-sm btn-outline-secondary ms-2">Código Fonte</a>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="https://github.com/PhlavioAlves24/landing-page-otimizada" target="_blank"><i class="fab fa-github"></i> Código</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title animate">Entre em Contato</h2>
-            <div class="row">
-                <div class="col-lg-6 animate" style="animation-delay: 0.2s;">
-                    <div class="contact-form">
-                        <form>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Seu Nome" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Seu Email" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Assunto">
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" rows="5" placeholder="Sua Mensagem" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-6 animate" style="animation-delay: 0.4s;">
-                    <h4 class="mb-4">Informações de Contato</h4>
-                    <p><i class="fas fa-envelope me-2"></i> phlavioalves5@gmail.com</p>
-                    <p><i class="fas fa-phone me-2"></i> (83)98896-1564</p>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> Jaboatão dos guararapes, PE</p>
-                    
-                    <h4 class="mt-5 mb-4">Redes Sociais</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-x"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <h2 class="section-heading">Contato</h2>
+                <p class="contact-text">
+                    Estou disponível para novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato e discutirmos como minhas habilidades podem agregar valor ao seu próximo projeto.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:phlavioalves5@gmail.com" class="contact-link reveal">
+                        <i class="fas fa-envelope"></i> phlavioalves5@gmail.com
+                    </a>
+                    <a href="https://linkedin.com/in/seu-linkedin" target="_blank" class="contact-link reveal">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://wa.me/558388961564" target="_blank" class="contact-link reveal">
+                        <i class="fab fa-whatsapp"></i> (83) 8896-1564
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; <span id="year"></span> Phlavio Alves. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Phlavio Alves. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
