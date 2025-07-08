@@ -348,19 +348,25 @@ section {
 
 .skill-card {
     background-color: var(--secondary-color);
-    padding: 2rem 1rem;
+    padding: 2.2rem 1rem; /* Increased vertical padding for more space */ /* MODIFIED */
     border-radius: var(--border-radius);
-    transition: transform var(--transition-speed) ease-in-out, box-shadow var(--transition-speed) ease-in-out;
+    border: 1px solid var(--secondary-color); /* Added a subtle border */ /* ADDED */
+    transition: transform var(--transition-speed) ease-in-out, 
+                box-shadow var(--transition-speed) ease-in-out,
+                background-color var(--transition-speed) ease-in-out,
+                border-color var(--transition-speed) ease-in-out; /* Added background-color and border-color to transition */ /* MODIFIED */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 2px 8px var(--shadow-light); /* Added a subtle initial shadow */ /* ADDED */
 }
 
 .skill-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 7px 20px var(--shadow-medium);
     background-color: var(--accent-color); /* Cor de fundo no hover */
+    border-color: var(--accent-color); /* Border color changes on hover */ /* ADDED */
 }
 
 .skill-card:hover i, .skill-card:hover span {
@@ -369,7 +375,7 @@ section {
 
 .skill-card i {
     font-size: 2.5rem;
-    color: var(--accent-color);
+    color: var(--text-color-secondary); /* Initial icon color set to secondary text color */ /* MODIFIED */
     margin-bottom: 0.5rem;
     transition: color var(--transition-speed) ease-in-out;
 }
